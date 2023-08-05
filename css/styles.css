@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(120deg, #4dabff, #62ddff);
+    color: white;
+}
+
+nav .logo {
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+
+nav .logo, nav .nav-items ul li, nav .logo-free {
+    padding: 1%;
+}
+
+nav .nav-items {
+    width: 25%;
+}
+
+nav .nav-items ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .nav-items ul li {
+    list-style-type: none;
+}
+
+nav .nav-items ul li a {
+    text-decoration: none;
+    font-size: 13px;
+    color: white;
+}
+
+nav button {
+    width: 8%;
+    border: none;
+    padding: 0.8%;
+    border: 1px solid white;
+    border-radius: 5px;
+    background: none;
+    color: white;
+    transition: 0.5s all;
+    cursor: pointer;
+    font-weight: 900;
+}
+
+nav button:hover {
+    color: darkblue;
+    background-color: white;
+}
+
+nav .toggle-btn {
+    display: none;
+    padding: 5%;
+    font-size: 20px;
+}
+
+nav .toggle-btn i {
+    cursor: pointer;
+}
+
+.nav-mobile {
+    display: none;
+    width: 100%;
+    background-color: black;
+    padding: 4%;
+}
+
+@media only screen and (max-width: 972px) {
+    nav {
+        justify-content: space-between;
+        background-color: black;
+    }
+
+    nav .toggle-btn {
+        display: block;
+        padding: 3%;
+    }
+
+    nav .nav-items {
+        display: none;
+    }
+
+    nav button {
+        display: none;
+    }
+
+    .nav-mobile ul {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .nav-mobile ul li {
+        list-style-type: none;
+        padding-block: 2%;
+        border-bottom: 0.5px solid white;
+    }
+    
+    .nav-mobile ul li a {
+        text-decoration: none;
+        font-size: 13px;
+        color: white;
+    }
+}
